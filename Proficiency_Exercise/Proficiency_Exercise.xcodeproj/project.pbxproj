@@ -13,6 +13,7 @@
 		130ABC94230D1F34004FF8AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130ABC93230D1F34004FF8AD /* Assets.xcassets */; };
 		130ABC97230D1F34004FF8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130ABC95230D1F34004FF8AD /* LaunchScreen.storyboard */; };
 		130ABCA2230D1F34004FF8AD /* Proficiency_ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCA1230D1F34004FF8AD /* Proficiency_ExerciseTests.swift */; };
+		130ABCB5230D26A7004FF8AD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCB4230D26A7004FF8AD /* Reachability.swift */; };
 		168F2C1A32AE7D2B87A56232 /* Pods_Proficiency_ExerciseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6A9404A11180980A947CA7 /* Pods_Proficiency_ExerciseTests.framework */; };
 		69655587AC17B6FF84820742 /* Pods_Proficiency_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BDBC8EC38CAD286A65C49 /* Pods_Proficiency_Exercise.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		130ABC9D230D1F34004FF8AD /* Proficiency_ExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Proficiency_ExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		130ABCA1230D1F34004FF8AD /* Proficiency_ExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proficiency_ExerciseTests.swift; sourceTree = "<group>"; };
 		130ABCA3230D1F34004FF8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		130ABCB4230D26A7004FF8AD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		23725596491B1238E5866CEE /* Pods-Proficiency_Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proficiency_Exercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Proficiency_Exercise/Pods-Proficiency_Exercise.debug.xcconfig"; sourceTree = "<group>"; };
 		5647315FC91415862A296D3C /* Pods-Proficiency_ExerciseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proficiency_ExerciseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Proficiency_ExerciseTests/Pods-Proficiency_ExerciseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F6A9404A11180980A947CA7 /* Pods_Proficiency_ExerciseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proficiency_ExerciseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,8 +91,10 @@
 		130ABC8B230D1F34004FF8AD /* Proficiency_Exercise */ = {
 			isa = PBXGroup;
 			children = (
+				130ABCB3230D266F004FF8AD /* ViewControllers */,
+				130ABCB2230D263D004FF8AD /* Custom */,
+				130ABCB1230D262E004FF8AD /* Models */,
 				130ABC8C230D1F34004FF8AD /* AppDelegate.swift */,
-				130ABC8E230D1F34004FF8AD /* ViewController.swift */,
 				130ABC90230D1F34004FF8AD /* Main.storyboard */,
 				130ABC93230D1F34004FF8AD /* Assets.xcassets */,
 				130ABC95230D1F34004FF8AD /* LaunchScreen.storyboard */,
@@ -106,6 +110,29 @@
 				130ABCA3230D1F34004FF8AD /* Info.plist */,
 			);
 			path = Proficiency_ExerciseTests;
+			sourceTree = "<group>";
+		};
+		130ABCB1230D262E004FF8AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		130ABCB2230D263D004FF8AD /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				130ABCB4230D26A7004FF8AD /* Reachability.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		130ABCB3230D266F004FF8AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				130ABC8E230D1F34004FF8AD /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		516E2C007487D7B653CAE414 /* Pods */ = {
@@ -303,6 +330,7 @@
 			files = (
 				130ABC8F230D1F34004FF8AD /* ViewController.swift in Sources */,
 				130ABC8D230D1F34004FF8AD /* AppDelegate.swift in Sources */,
+				130ABCB5230D26A7004FF8AD /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
