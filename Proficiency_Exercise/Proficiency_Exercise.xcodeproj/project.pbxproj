@@ -14,6 +14,10 @@
 		130ABC97230D1F34004FF8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130ABC95230D1F34004FF8AD /* LaunchScreen.storyboard */; };
 		130ABCA2230D1F34004FF8AD /* Proficiency_ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCA1230D1F34004FF8AD /* Proficiency_ExerciseTests.swift */; };
 		130ABCB5230D26A7004FF8AD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCB4230D26A7004FF8AD /* Reachability.swift */; };
+		130ABCB8230D3DDC004FF8AD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCB7230D3DDC004FF8AD /* CustomTableViewCell.swift */; };
+		130ABCBA230D421E004FF8AD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCB9230D421E004FF8AD /* DataModel.swift */; };
+		130ABCBE230D4E97004FF8AD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCBD230D4E96004FF8AD /* Helper.swift */; };
+		130ABCC2230D4FB2004FF8AD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCC1230D4FB2004FF8AD /* MBProgressHUD.m */; };
 		168F2C1A32AE7D2B87A56232 /* Pods_Proficiency_ExerciseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6A9404A11180980A947CA7 /* Pods_Proficiency_ExerciseTests.framework */; };
 		69655587AC17B6FF84820742 /* Pods_Proficiency_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BDBC8EC38CAD286A65C49 /* Pods_Proficiency_Exercise.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +44,12 @@
 		130ABCA1230D1F34004FF8AD /* Proficiency_ExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proficiency_ExerciseTests.swift; sourceTree = "<group>"; };
 		130ABCA3230D1F34004FF8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		130ABCB4230D26A7004FF8AD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		130ABCB7230D3DDC004FF8AD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		130ABCB9230D421E004FF8AD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		130ABCBD230D4E96004FF8AD /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		130ABCBF230D4FB1004FF8AD /* Proficiency_Exercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Proficiency_Exercise-Bridging-Header.h"; sourceTree = "<group>"; };
+		130ABCC0230D4FB2004FF8AD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		130ABCC1230D4FB2004FF8AD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		23725596491B1238E5866CEE /* Pods-Proficiency_Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proficiency_Exercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Proficiency_Exercise/Pods-Proficiency_Exercise.debug.xcconfig"; sourceTree = "<group>"; };
 		5647315FC91415862A296D3C /* Pods-Proficiency_ExerciseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proficiency_ExerciseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Proficiency_ExerciseTests/Pods-Proficiency_ExerciseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F6A9404A11180980A947CA7 /* Pods_Proficiency_ExerciseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proficiency_ExerciseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				130ABCB3230D266F004FF8AD /* ViewControllers */,
+				130ABCB6230D3DA7004FF8AD /* CustomCells */,
 				130ABCB2230D263D004FF8AD /* Custom */,
 				130ABCB1230D262E004FF8AD /* Models */,
 				130ABC8C230D1F34004FF8AD /* AppDelegate.swift */,
@@ -115,6 +126,7 @@
 		130ABCB1230D262E004FF8AD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				130ABCB9230D421E004FF8AD /* DataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				130ABCB4230D26A7004FF8AD /* Reachability.swift */,
+				130ABCC0230D4FB2004FF8AD /* MBProgressHUD.h */,
+				130ABCC1230D4FB2004FF8AD /* MBProgressHUD.m */,
+				130ABCBD230D4E96004FF8AD /* Helper.swift */,
+				130ABCBF230D4FB1004FF8AD /* Proficiency_Exercise-Bridging-Header.h */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -133,6 +149,14 @@
 				130ABC8E230D1F34004FF8AD /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		130ABCB6230D3DA7004FF8AD /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				130ABCB7230D3DDC004FF8AD /* CustomTableViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		516E2C007487D7B653CAE414 /* Pods */ = {
@@ -166,6 +190,7 @@
 				130ABC85230D1F34004FF8AD /* Sources */,
 				130ABC86230D1F34004FF8AD /* Frameworks */,
 				130ABC87230D1F34004FF8AD /* Resources */,
+				D3127DF18A61B4695C568C08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,7 +209,6 @@
 				130ABC99230D1F34004FF8AD /* Sources */,
 				130ABC9A230D1F34004FF8AD /* Frameworks */,
 				130ABC9B230D1F34004FF8AD /* Resources */,
-				8C7FF92A1CA34ADDB73B9343 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +232,7 @@
 				TargetAttributes = {
 					130ABC88230D1F34004FF8AD = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					130ABC9C230D1F34004FF8AD = {
 						CreatedOnToolsVersion = 10.3;
@@ -277,7 +302,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C7FF92A1CA34ADDB73B9343 /* [CP] Embed Pods Frameworks */ = {
+		D3127DF18A61B4695C568C08 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,7 +310,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Proficiency_ExerciseTests/Pods-Proficiency_ExerciseTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Proficiency_Exercise/Pods-Proficiency_Exercise-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -296,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Proficiency_ExerciseTests/Pods-Proficiency_ExerciseTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Proficiency_Exercise/Pods-Proficiency_Exercise-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E533612421C4466E54C80995 /* [CP] Check Pods Manifest.lock */ = {
@@ -328,9 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130ABCBA230D421E004FF8AD /* DataModel.swift in Sources */,
 				130ABC8F230D1F34004FF8AD /* ViewController.swift in Sources */,
 				130ABC8D230D1F34004FF8AD /* AppDelegate.swift in Sources */,
+				130ABCB8230D3DDC004FF8AD /* CustomTableViewCell.swift in Sources */,
 				130ABCB5230D26A7004FF8AD /* Reachability.swift in Sources */,
+				130ABCBE230D4E97004FF8AD /* Helper.swift in Sources */,
+				130ABCC2230D4FB2004FF8AD /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +522,7 @@
 			baseConfigurationReference = 23725596491B1238E5866CEE /* Pods-Proficiency_Exercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Proficiency_Exercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,6 +531,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-siva.Proficiency-Exercise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Proficiency_Exercise/Custom/Proficiency_Exercise-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -511,6 +543,7 @@
 			baseConfigurationReference = 8DCFA0834C42B1231DAE55FD /* Pods-Proficiency_Exercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Proficiency_Exercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,6 +552,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-siva.Proficiency-Exercise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Proficiency_Exercise/Custom/Proficiency_Exercise-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
