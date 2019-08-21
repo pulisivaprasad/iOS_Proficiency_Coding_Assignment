@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var dataObjArr = [DataModel]()
+    var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +19,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.estimatedRowHeight = 140
         tableView.tableFooterView = UIView()
         
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Refresh the data")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
         //Api calling
         getDataFromApi()
 
+    }
+    
+    @objc func refresh() {
+        getDataFromApi()
     }
     
     // MARK: Api Call
@@ -39,7 +50,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     DispatchQueue.main.async(execute: {
                         Helper.sharedHelper.dismissHUD(view: self.view)
-                        
+                        self.refreshControl.endRefreshing()
+
                         self.title = jsonData["title"] as? String ?? ""
                         let arr = DataModel.modelsFromDictionaryArray(array: jsonData["rows"] as! NSArray)
                         self.dataObjArr = arr as [DataModel]
@@ -64,7 +76,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
+}
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+     return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataObjArr.count
@@ -81,7 +98,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
-
 }
 
