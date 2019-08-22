@@ -1,33 +1,34 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Proficiency_Exercise
 //
-//  Created by sivaprasad reddy on 21/08/19.
+//  Created by sivaprasad reddy on 22/08/19.
 //  Copyright © 2019 Siva. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
+
     @IBOutlet var tableView: UITableView!
     var dataObjArr = [DataModel]()
     var refreshControl: UIRefreshControl!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.estimatedRowHeight = 140
         tableView.tableFooterView = UIView()
-        
-        
+
+        //Pull to refresh
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Refresh the data")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
         
-        //Api calling
+        //Api call calling
         getDataFromApi()
-
+        
     }
     
     @objc func refresh() {
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 guard data != nil else { return }
                 do {
-                    
+                    //Data we are converting in to UTF8 data
                     let utf8Data = String(decoding: data!, as: UTF8.self).data(using: .utf8)
                     
                     let jsonData: NSMutableDictionary = try JSONSerialization.jsonObject(with: utf8Data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableDictionary
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
                     DispatchQueue.main.async(execute: {
                         Helper.sharedHelper.dismissHUD(view: self.view)
                         self.refreshControl.endRefreshing()
-
+                        
                         self.title = jsonData["title"] as? String ?? ""
                         let arr = DataModel.modelsFromDictionaryArray(array: jsonData["rows"] as! NSArray)
                         self.dataObjArr = arr as [DataModel]
@@ -78,9 +79,9 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-     return 1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

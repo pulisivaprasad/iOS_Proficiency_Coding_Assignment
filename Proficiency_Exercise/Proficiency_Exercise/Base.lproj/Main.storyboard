@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Proficiency_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HVC" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Proficiency_Exercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,8 +76,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0yP-ll-ai5"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TeT-Hh-Ibj"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jiS-bq-wbW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BiN-dc-IMn"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -92,7 +92,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JsN-ov-JTv"/>
                     <connections>
-                        <outlet property="tableView" destination="9el-bj-0be" id="oA8-Xh-JQx"/>
+                        <outlet property="tableView" destination="9el-bj-0be" id="BdC-EL-mSy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
