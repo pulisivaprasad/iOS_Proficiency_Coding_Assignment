@@ -12,12 +12,12 @@
 		130ABC92230D1F34004FF8AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130ABC90230D1F34004FF8AD /* Main.storyboard */; };
 		130ABC94230D1F34004FF8AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130ABC93230D1F34004FF8AD /* Assets.xcassets */; };
 		130ABC97230D1F34004FF8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130ABC95230D1F34004FF8AD /* LaunchScreen.storyboard */; };
-		130ABCA2230D1F34004FF8AD /* Proficiency_ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCA1230D1F34004FF8AD /* Proficiency_ExerciseTests.swift */; };
 		130ABCB5230D26A7004FF8AD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCB4230D26A7004FF8AD /* Reachability.swift */; };
 		130ABCB8230D3DDC004FF8AD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCB7230D3DDC004FF8AD /* CustomTableViewCell.swift */; };
 		130ABCBA230D421E004FF8AD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCB9230D421E004FF8AD /* DataModel.swift */; };
 		130ABCBE230D4E97004FF8AD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCBD230D4E96004FF8AD /* Helper.swift */; };
 		130ABCC2230D4FB2004FF8AD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCC1230D4FB2004FF8AD /* MBProgressHUD.m */; };
+		130ABCC8230D72F7004FF8AD /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ABCC7230D72F7004FF8AD /* ViewControllerTest.swift */; };
 		168F2C1A32AE7D2B87A56232 /* Pods_Proficiency_ExerciseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6A9404A11180980A947CA7 /* Pods_Proficiency_ExerciseTests.framework */; };
 		69655587AC17B6FF84820742 /* Pods_Proficiency_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BDBC8EC38CAD286A65C49 /* Pods_Proficiency_Exercise.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,6 @@
 		130ABC96230D1F34004FF8AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		130ABC98230D1F34004FF8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		130ABC9D230D1F34004FF8AD /* Proficiency_ExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Proficiency_ExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		130ABCA1230D1F34004FF8AD /* Proficiency_ExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proficiency_ExerciseTests.swift; sourceTree = "<group>"; };
 		130ABCA3230D1F34004FF8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		130ABCB4230D26A7004FF8AD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		130ABCB7230D3DDC004FF8AD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		130ABCBF230D4FB1004FF8AD /* Proficiency_Exercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Proficiency_Exercise-Bridging-Header.h"; sourceTree = "<group>"; };
 		130ABCC0230D4FB2004FF8AD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		130ABCC1230D4FB2004FF8AD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		130ABCC7230D72F7004FF8AD /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 		23725596491B1238E5866CEE /* Pods-Proficiency_Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proficiency_Exercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Proficiency_Exercise/Pods-Proficiency_Exercise.debug.xcconfig"; sourceTree = "<group>"; };
 		5647315FC91415862A296D3C /* Pods-Proficiency_ExerciseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proficiency_ExerciseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Proficiency_ExerciseTests/Pods-Proficiency_ExerciseTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F6A9404A11180980A947CA7 /* Pods_Proficiency_ExerciseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proficiency_ExerciseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +117,7 @@
 		130ABCA0230D1F34004FF8AD /* Proficiency_ExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
-				130ABCA1230D1F34004FF8AD /* Proficiency_ExerciseTests.swift */,
+				130ABCC7230D72F7004FF8AD /* ViewControllerTest.swift */,
 				130ABCA3230D1F34004FF8AD /* Info.plist */,
 			);
 			path = Proficiency_ExerciseTests;
@@ -367,7 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				130ABCA2230D1F34004FF8AD /* Proficiency_ExerciseTests.swift in Sources */,
+				130ABCC8230D72F7004FF8AD /* ViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
